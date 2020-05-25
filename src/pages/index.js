@@ -45,7 +45,6 @@ const IndexPage = () => {
           />
          )
         })}
-      <Footer/>
 
     </div>  
   )
