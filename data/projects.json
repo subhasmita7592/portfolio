@@ -1,0 +1,18 @@
+[
+    {
+      "title": "Human Resource Management (HRM)",
+      "slug": "project-1",
+      "url": "https://example.com/",
+      "image": "./images/project1.jpg",
+      "description": "This application is used by organizations. It simplifies the day to day work of a Human Resource Management System. This project enables you to handle the whole organization details like it keeps records of all employee details. This also handles Different Departments of that organization. There is a field called payment where the organization could handle their employees salary details so they can handle job postings. This can handle very part of the organization in one application.",
+      "tags": ["HTML, CSS, JavaScript, React.js, Ant Design"]
+    },
+    {
+      "title": "Smart Brain",
+      "slug": "project-2",
+      "url": "https://example.org/",
+      "image": "./images/project2.jpg",
+      "description": "This is a small single page react application. It uses images to login. If you are a new user, you have to give you an image link. Apart from that, I have designed a few different Landing Page and websites using HTML, CSS, and Bootstrap.",
+      "tags": ["HTML, CSS, JavaScript, React.js, Node.js Clarifai API"]
+    }
+  ]
