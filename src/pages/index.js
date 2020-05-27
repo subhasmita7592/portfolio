@@ -1,53 +1,22 @@
-import React from "react"
-import '../styles/style.scss'
-import {graphql,useStaticQuery} from 'gatsby'
-import Header from '../components/header'
-import Portfolio from "../components/portfolio"
-import ProjectPreview from '../components/projectPreview'
-import Footer from "../components/footer"
-const IndexPage = () => {
-  const data = useStaticQuery(graphql`
-  {
-    allProjectsJson{
-      edges{
-        node{
-          title
-          url
-          slug
-          description
-         
-        }
-      }
-    }
-  }
-  
-  `)
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import App from '../components/App';
+import { headData } from '../mock/data';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../style/main.scss';
 
-  const projects = data.allProjectsJson.edges
+export default () => {
+  const { title, lang, description } = headData;
 
   return (
-    <div>
-        <Header/>
-         <Portfolio/> 
-
-        
-        {projects.map(({node:project}) =>{
-
-          const title = project.title;
-          const description = project.description
-          const slug = project.slug
-
-        return (
-          <ProjectPreview
-          title={title}
-          description={description}
-          slug={slug}
-          />
-         )
-        })}
-
-    </div>  
-  )
-}
-
-export default IndexPage
+    <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{title || 'Gatsby Simplefolio'}</title>
+        <html lang={lang || 'en'} />
+        <meta name="description" content={description || 'Gatsby Simplefolio'} />
+      </Helmet>
+      <App />
+    </>
+  );
+};
